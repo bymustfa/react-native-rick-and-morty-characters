@@ -2,7 +2,7 @@
   "expo": {
     "name": "rick-and-morty-characters",
     "slug": "rick-and-morty-characters",
-    "version": "1.1.0",
+    "version": "1.3.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -12,7 +12,8 @@
       "backgroundColor": "#0b0e17"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/3c27064f-0923-4fc8-b247-a6ed41efd8c3"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -21,6 +22,7 @@
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -34,6 +36,9 @@
       "eas": {
         "projectId": "3c27064f-0923-4fc8-b247-a6ed41efd8c3"
       }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }

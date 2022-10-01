@@ -38,7 +38,6 @@ const HomeView = () => {
 
   const setCharactersData = async (isSearch = false) => {
     const response = await getCharacters(currentPage);
-    console.log("response", response);
     const newCharacters = isSearch ? response : [...characters, ...response];
     setCharacters(newCharacters);
   };
