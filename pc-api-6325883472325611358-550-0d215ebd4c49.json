@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pc-api-6325883472325611358-550",
+  "private_key_id": "0d215ebd4c4952e23821cb9ed2be186890f11a85",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCaPnZdLiJM5yLz\nJey5yq04JAlGDbTTJlG+TEsGg12gQ7m8frPuUqtjQC6DvA+dRbzBIQPU+yVMZuT/\nwFJE/lLp+7hPsS0v8lcCCCZl7raI7K8qzrdLDYFzxStwgeC3ZbsIMxcu2cboemAZ\nGgHzKm05ApnmVEwCpJlRgqBnFMmqykxiH4t72f1/g14Bot/oQj3yT/mTEf0JcNYr\n3NyOhDmEE70aZj5z9q8ts/FoGGTnlTyTvCPJ1Dr/W93CGMgE/+O4mVw/c97U09fk\n5EgfFZLbab5rQAb/5L3a1Z0sfER8fBR9rypczuCp49Ede/yWkgyakl4WtWnMAY1u\n3kxAlTBBAgMBAAECggEAGBn3g9LgIDUjtGuyJEvjqjiTTGN65F2B+2LPfFqNiCvc\n+3Ou6Of5CN6wBfyeUfxiJKlkgGSn7NrNIJtsH4S/7vja0XUFcw8CgnpEibv1wMp/\nCojXgj4/gpgGFCPvOakHQx48mqED4DKzDmkOcfEotPZPlvqIEAepP1/ScZkBdBK+\n79Q8dl6JgpMwabGhLPWj8DHvaGcthQVRMniMHzXS2fOa0AmNRE8HyVQaMn4pqgek\nMsrVyy4kHo/scXq0JELfXKoXHW5HCbv1yIvRkKK33uCyFXua1z+FpHn3EzXBM45G\nFdEzfajx8+6z6JiSvUlL5NBuDgrCPoESdnr1aDprYwKBgQDYIgE3fhv+PAXYhg2M\n+6vo6iip3/Dh87KaJr/Vc+DU9B/7Y/IyltIGKMf5fsCWSQun8EuBNzcxI1RGAVin\nr470RTz0hUq97QdGN91fIrPlYAclnET11zyRmiLq/GGTJs7AnZm2ejmK+S+bOu9X\njKyY8rGxGREDDOmLKs6amAd45wKBgQC2sgIyekk+S5W+251zqGhcqRyCYFTK7xL2\nXb2OGoCLAOkGjkidqQNo021Mh60fv32c7VxL4GYVbciyGqR2TjDvdlMS2xY0iq2+\nv5+f9y/uEF0cUpg2uSDYPo7Vgb32QtQfScJMjZBoOtsWaqF11PxInhuGsYAlXjpl\nP0nbQHAglwKBgFJU2cvO0VEOgleR8TWEZV8rW+QiN3uLPrz0B92C7+GPQWOdFhTp\nWQYZoNvMygY1uyf1JH4Lj427XI3yU1hFSxqICYlIAUnKMhwwibaE3KyC4RYVqjtQ\nC3WXlreW/oB0pwu+vWBCvQrQk675S1U5dEIrKT9CQjW8RHbMDrnbMfV/AoGBAIZC\ndv7lgyH2pgtmlWVDo75EwSDG7klcPFE1PnJJ46FDf/xDX/YNGOZWSgJtyrqEHSnP\n/X39YMfqsAzDK42NlMTF7fLzcnQWXezKIeKK43xOJj8EK7w7fHmuL4WUHSf2oLCF\nofZkKnWOmyb0IcfYR7aOCqiHlSbhAoUZZ4tq5XvtAoGASrIx8BEDhQMbOXI4q7zD\nXJb/5Q2mNCZ/pnVBtAnyEiXzLE+P10mY+AWOxlxNTHOZthoy4V02rlGybI0OfThX\nxYUVKLGNs7NeKLhi/CUY5hKO02a18/bXFdaG7idxo3Lg0Q4AEjEvsTUQnC1tTPqF\nquKyZs/cmgFrrlBYeJxINN8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "expo-rick-and-morty@pc-api-6325883472325611358-550.iam.gserviceaccount.com",
+  "client_id": "114883426981205841373",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/expo-rick-and-morty%40pc-api-6325883472325611358-550.iam.gserviceaccount.com"
+}
