@@ -1,4 +1,4 @@
-# React Native - Rick and Morty Character List App
+# React Native - Rick and Morty Character List App <image src='/assets/just-morty.png' alt="Morty" height="50px" />
 
 
 
