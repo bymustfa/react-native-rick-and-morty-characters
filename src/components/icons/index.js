@@ -3,5 +3,8 @@ export { default as ChevronLeft } from "./ChevronLeft";
 export { default as ChevronRight } from "./ChevronRight";
 export { default as ChevronsLeft } from "./ChevronsLeft";
 export { default as ChevronsRight } from "./ChevronsRight";
+export { default as HeartEmty } from "./HeartEmty";
+export { default as HeartFull } from "./HeartFull";
+export { default as HeartList } from "./HeartList";
 export { default as Search } from "./Search";
 export { default as Times } from "./Times";

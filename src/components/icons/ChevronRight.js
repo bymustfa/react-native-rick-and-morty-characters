@@ -1,6 +1,5 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
-
 const SvgChevronRight = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
@@ -18,5 +17,4 @@ const SvgChevronRight = (props) => (
     <Path d="m9 18 6-6-6-6" />
   </Svg>
 );
-
 export default SvgChevronRight;

@@ -1,16 +1,22 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Layout, Text, Spinner, Card } from "@ui-kitten/components";
-import { FlatList, Image } from "react-native";
+import React, { useEffect, useState } from "react";
+import {
+  Layout,
+  Text,
+  Spinner,
+  TopNavigationAction,
+} from "@ui-kitten/components";
+import { FlatList } from "react-native";
 
-import { useNavigation } from "@react-navigation/native";
+import { HeartEmty } from "../components/icons";
+
 import Services from "../services/characters";
 import TopBar from "../components/base/top-bar";
 import HomeFilter from "../components/base/home-filter";
+import CardItem from "../components/base/card-item";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeView = () => {
   const navigation = useNavigation();
-
-  const textLenght = 15;
 
   const [characters, setCharacters] = useState([]);
   const [characterCount, setCharacterCount] = useState(0);
@@ -57,6 +63,12 @@ const HomeView = () => {
       <TopBar
         title="Rick and Morty"
         subtitle={`List of characters (${characterCount})`}
+        accessoryRight={() => (
+          <TopNavigationAction
+            icon={<HeartEmty color="#fff" />}
+            onPress={() => navigation.navigate("Favorite")}
+          />
+        )}
       />
       <HomeFilter
         onSearch={(text) => setSearch(text)}
@@ -85,63 +97,7 @@ const HomeView = () => {
             }}
             numColumns={2}
             data={characters}
-            renderItem={({ item, index }) => (
-              <Layout
-                style={{
-                  width: "50%",
-                  padding: 5,
-                  height: 220,
-                }}
-              >
-                <Card
-                  onPress={() =>
-                    navigation.navigate("Detail", { character: item })
-                  }
-                  appearance="filled"
-                  style={{
-                    height: "100%",
-                    backgroundColor: "#151A2F",
-                    borderRadius: 6,
-                  }}
-                  level="3"
-                >
-                  <Image
-                    resizeMode="contain"
-                    style={{
-                      width: "100%",
-                      height: 150,
-                    }}
-                    source={{ uri: item.image }}
-                  />
-                  <Layout
-                    style={{
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                    level="3"
-                  >
-                    <Text style={{ textAlign: "center" }}>
-                      {item.name.length > textLenght
-                        ? item.name.substring(0, textLenght) + "..."
-                        : item.name}
-                    </Text>
-                    <Text
-                      style={{ textAlign: "center" }}
-                      category="c2"
-                      status={
-                        item.status === "Alive"
-                          ? "success"
-                          : item.status === "Dead"
-                          ? "danger"
-                          : "warning"
-                      }
-                    >
-                      {item.status}
-                    </Text>
-                  </Layout>
-                </Card>
-              </Layout>
-            )}
+            renderItem={({ item, index }) => <CardItem item={item} />}
           />
           {isFetching && (
             <Layout

@@ -1,14 +1,30 @@
-import React from "react";
-import { Layout, Text, List, ListItem } from "@ui-kitten/components";
+import React, { useEffect, useState, useCallback } from "react";
+import {
+  Layout,
+  Text,
+  List,
+  ListItem,
+  TopNavigationAction,
+} from "@ui-kitten/components";
 import { Image } from "react-native";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import {
+  useIsFocused,
+  useNavigation,
+  useRoute,
+} from "@react-navigation/native";
 import TopBar from "../components/base/top-bar";
+import Services from "../services/characters";
+import { HeartEmty, HeartFull } from "../components/icons";
 
 const DetailView = () => {
   const navigation = useNavigation();
+  const isFocused = useIsFocused();
+
   const route = useRoute();
 
   const character = route.params.character;
+
+  const [isFavorite, setIsFavorite] = useState(character.isFavorite);
 
   const data = [
     { title: "Name", value: character.name },
@@ -18,15 +34,49 @@ const DetailView = () => {
     { title: "Gender", value: character.gender },
   ];
 
-  console.log("character", route.params.character);
+  const handleFavorite = async () => {
+    const favoriteCharacters = await Services.AddFavoriteCharacter(
+      character.id
+    );
+    setIsFavorite(favoriteCharacters.includes(character.id));
+  };
+
+  const handleUnfavorite = async () => {
+    const favoriteCharacters = await Services.RemoveFavoriteCharacter(
+      character.id
+    );
+    setIsFavorite(favoriteCharacters.includes(character.id));
+  };
+
+  const characterIsFavorite = useCallback(async () => {
+    const favoriteCharacters = await Services.GetFavoriteCharacters();
+    setIsFavorite(favoriteCharacters.includes(character.id));
+  }, [character.id]);
+
+  useEffect(() => {
+    if (isFocused) {
+      characterIsFavorite();
+    }
+  }, [isFocused]);
+
   return (
     <Layout style={{ height: "100%" }}>
       <TopBar
         title={character.name}
         subtitle={character.status}
-        onBack={() => {
-          navigation.goBack();
-        }}
+        accessoryRight={() => (
+          <TopNavigationAction
+            icon={
+              isFavorite ? (
+                <HeartFull fill="#DA3030" stroke="#DA3030" />
+              ) : (
+                <HeartEmty color="#adacac" />
+              )
+            }
+            onPress={isFavorite ? handleUnfavorite : handleFavorite}
+          />
+        )}
+        onBack={() => navigation.goBack()}
       />
 
       <Layout style={{ alignItems: "center" }}>

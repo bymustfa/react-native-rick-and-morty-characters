@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
-  Icon,
   Layout,
-  MenuItem,
-  OverflowMenu,
   TopNavigation,
   TopNavigationAction,
 } from "@ui-kitten/components";
-import { ArrowLeft } from "../icons";
+import { ArrowLeft, HeartFull, HeartEmty } from "../icons";
 
-const TopBar = ({ onBack = null, title = "", subtitle = "" }) => {
+const TopBar = ({
+  onBack = null,
+  title = "",
+  subtitle = "",
+  accessoryRight = false,
+}) => {
   return (
     <Layout level="1">
       <TopNavigation
         alignment="center"
         title={title}
         subtitle={subtitle}
+        accessoryRight={accessoryRight}
         accessoryLeft={() =>
           onBack && (
             <TopNavigationAction

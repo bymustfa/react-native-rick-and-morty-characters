@@ -6,10 +6,13 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+
+    "svgr": "svgr ./icons -d ./src/components/icons --native --icon --svg-props \"width=24,height=24,className=\""
   },
   "dependencies": {
     "@eva-design/eva": "^2.1.1",
+    "@react-native-async-storage/async-storage": "~1.17.3",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.0",
     "@ui-kitten/components": "^5.1.2",

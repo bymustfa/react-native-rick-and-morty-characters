@@ -8,6 +8,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 
 import HomeView from "./src/views/HomeView";
+import FavoriteView from "./src/views/FavoriteView";
 import DetailView from "./src/views/DetailView";
 
 const Stack = createNativeStackNavigator();
@@ -34,6 +35,13 @@ export default function App() {
             <Stack.Screen
               name="Detail"
               component={DetailView}
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="Favorite"
+              component={FavoriteView}
               options={{
                 headerShown: false,
               }}
