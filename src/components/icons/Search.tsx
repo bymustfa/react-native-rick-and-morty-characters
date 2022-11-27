@@ -1,6 +1,6 @@
 import * as React from "react";
-import Svg, { Path } from "react-native-svg";
-const SvgHeartEmty = (props) => (
+import Svg, { SvgProps, Circle, Path } from "react-native-svg";
+const SvgSearch = (props: SvgProps) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -14,7 +14,8 @@ const SvgHeartEmty = (props) => (
     className=""
     {...props}
   >
-    <Path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+    <Circle cx={11} cy={11} r={8} />
+    <Path d="m21 21-4.35-4.35" />
   </Svg>
 );
-export default SvgHeartEmty;
+export default SvgSearch;

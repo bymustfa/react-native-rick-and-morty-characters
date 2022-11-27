@@ -1,6 +1,6 @@
 import * as React from "react";
-import Svg, { Path } from "react-native-svg";
-const SvgTimes = (props) => (
+import Svg, { SvgProps, Path } from "react-native-svg";
+const SvgChevronRight = (props: SvgProps) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -14,7 +14,7 @@ const SvgTimes = (props) => (
     className=""
     {...props}
   >
-    <Path d="M18 6 6 18M6 6l12 12" />
+    <Path d="m9 18 6-6-6-6" />
   </Svg>
 );
-export default SvgTimes;
+export default SvgChevronRight;

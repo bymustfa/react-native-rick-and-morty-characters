@@ -4,20 +4,16 @@
       "developmentClient": true,
       "distribution": "internal"
     },
-    "preview": {
+    "andro": {
       "distribution": "internal",
       "android": {
         "buildType": "apk"
       }
     },
-    "preview2": {
-      "android": {
-        "gradleCommand": ":app:assembleRelease"
+    "io": {
+      "ios": {
+        "buildType": "archive"
       }
-    },
-    "preview3": {
-      "developmentClient": true
-    },
-    "production": {}
+    }
   }
 }

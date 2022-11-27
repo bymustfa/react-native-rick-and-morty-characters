@@ -7,28 +7,35 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "svgr": "svgr ./icons -d ./src/components/icons --native --icon --svg-props \"width=24,height=24,className=\""
+    "svgr": "svgr ./icons -d ./src/components/icons --native --typescript --icon --svg-props \"width=24,height=24,className=\""
   },
   "dependencies": {
-    "@eva-design/eva": "^2.1.1",
     "@react-native-async-storage/async-storage": "~1.17.3",
     "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.0",
-    "@ui-kitten/components": "^5.1.2",
+    "@supabase/supabase-js": "^2.1.0",
     "axios": "^0.27.2",
     "expo": "~46.0.13",
+    "expo-dev-client": "~1.3.1",
     "expo-status-bar": "~1.4.0",
-    "expo-updates": "~0.14.6",
+    "expo-updates": "~0.14.7",
     "react": "18.0.0",
     "react-native": "0.69.6",
     "react-native-safe-area-context": "4.3.1",
     "react-native-screens": "~3.15.0",
-    "react-native-svg": "12.3.0"
+    "react-native-svg": "12.3.0",
+    "react-native-url-polyfill": "^1.3.0",
+    "styled-components": "^5.3.6",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@svgr/cli": "^6.4.0"
+    "@svgr/cli": "^6.4.0",
+    "@types/react": "~18.0.14",
+    "@types/react-native": "~0.69.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "typescript": "~4.3.5"
   },
   "private": true
 }
