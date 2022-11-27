@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import { Box, Text } from "../components/base";
 
-const HomeView: FC = () => {
+const SettingsView: FC = () => {
   return (
     <Box>
-      <Text>Home</Text>
+      <Text>SettingsView</Text>
     </Box>
   );
 };
 
-export default HomeView;
+export default SettingsView;
